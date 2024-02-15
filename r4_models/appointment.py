@@ -4,14 +4,12 @@ This may result in one or more Encounter(s).
 FHIR Version: R4
 """
 from base_model import Base
-import sqlalchemy as sa
-import sqlalchemy.orm as orm
-from sqlalchemy import String, List, Integer, Text, Enum
+from sqlalchemy import String, List, Integer, Text
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 
 
-class Appointment(Base):
-    __tablename__ = 'appointment'
+class AppointmentR4(Base):
+    __tablename__ = 'appointment_r4'
 
     # Resource and Domain Resource FHIR data types. Resource type will always be "Appointment"
     resource_type: Mapped[str] = mapped_column(String, default="Appointment")
@@ -45,13 +43,13 @@ class Appointment(Base):
     requestedPeriod: Mapped[str] = mapped_column(Text)
 
     # Appointment Resource FHIR data types: child resource (backbone element)
-    participants: Mapped[List["AppointmentParticipant"]] = relationship(
-        back_populates="appointment"
+    participants: Mapped[List["AppointmentParticipantR4"]] = relationship(
+        back_populates="appointment_r4"
     )
 
 
-class AppointmentParticipant(Base):
-    __tablename__ = 'appointment_participant'
+class AppointmentParticipantR4(Base):
+    __tablename__ = 'appointment_participant_r4'
 
     # Appointment Participant Resource FHIR data types: primitives
     required: Mapped[str] = mapped_column(String)
@@ -63,7 +61,7 @@ class AppointmentParticipant(Base):
     period: Mapped[str] = mapped_column(String)
 
     # Appointment Participant FHIR data types: parent resource (domain resource)
-    appointment: Mapped["Appointment"] = relationship(back_populates="appointment_participant")
+    appointment: Mapped["AppointmentR4"] = relationship(back_populates="appointment_participant_r4")
 
 
 

@@ -1,5 +1,5 @@
 """
-This file creates the base sqlalchemy models for the ORM
+This file creates the base sqlalchemy r4_models for the ORM
 """
 from sqlalchemy.orm import DeclarativeBase
 from sqlalchemy import Column, Integer, String
