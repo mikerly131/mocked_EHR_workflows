@@ -4,13 +4,15 @@
 /idea
 idea
 
-# No virtual envs
-venv
-/venv
-/.venv
-.venv
-
-
+# No secrets or configs
+config.py
+auth_config.py
+/config.py
+/auth_config.py
+config.txt
+auth_config.txt
+/config.txt
+/auth_config.txt
 
 
 # Byte-compiled / optimized / DLL files
@@ -142,6 +144,12 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+
+# No virtual envs
+venv
+/venv
+/.venv
+.venv
 
 # Spyder project settings
 .spyderproject
