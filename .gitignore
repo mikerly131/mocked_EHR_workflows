@@ -1,3 +1,18 @@
+# No idea files
+.idea
+/.idea
+/idea
+idea
+
+# No virtual envs
+venv
+/venv
+/.venv
+.venv
+
+
+
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
