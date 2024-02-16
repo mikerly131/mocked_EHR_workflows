@@ -7,7 +7,7 @@ Rewriting an application to mock EHR workflows with FHIR integrations
 * Determine the FHIR resources that will be needed to persist / read /search workflow data on a FHIR Server.
 * Which FHIR server / sandbox to use:  Epic? Make my own FHIR server?
 * Create a DB for the FHIR Server if using my own, mock up something like an EHR would use. 
-  - Example:  HAPI FHIR, find others
+  - Data model that is more tightly coupled to specific FHIR Versions or less coupled, version agnostic?
   - Use a DB that supports JSON data types?  If not, serialize / deserialize with service?
 * Figure out what fhir-py, smart-on-fhir/client-py, fhirpath-py and FHIRpath in general all do and why.
   - Been reviewing docs and examples and it is not much clearer yet what benefits these provide me.
