@@ -16,4 +16,4 @@ app = FastAPI(docs_url=None, redoc_url=None)
 
 @app.on_event("startup")
 async def on_startup():
-    await init_db()
+    await pg_database.init_db()
