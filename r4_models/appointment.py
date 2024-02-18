@@ -18,7 +18,7 @@ class AppointmentR4(Base):
     display_text_div: Mapped[str] = mapped_column(String, nullable=False)
 
     # Appointment Resource FHIR data types: primitives
-    external_id: Mapped[int] = mapped_column(Integer)
+    external_id: Mapped[str] = mapped_column(String)
     status: Mapped[str] = mapped_column(String)
     priority: Mapped[str] = mapped_column(String)
     description: Mapped[str] = mapped_column(String)
