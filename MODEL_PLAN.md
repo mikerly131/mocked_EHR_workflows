@@ -31,6 +31,11 @@
   - elements tbd
 * Location (Resource)
   - Probably can at least use this actor reference for appointments to have a location where they are scheduled
+* Schedule (Resource)
+  - Providers have schedules with SLOTS of time that are either busy or free
+* Slot (Resource)
+  - Time slots within a providers schedule.
+  - Need to check if locations have schedules/slots as well.
 
 
 ### FHIR Version Agnostic Model Classes
