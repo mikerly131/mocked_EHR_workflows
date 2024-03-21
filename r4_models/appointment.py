@@ -48,6 +48,7 @@ class AppointmentR4(Base):
     )
 
 
+
 class AppointmentParticipantR4(Base):
     __tablename__ = 'appointment_participant_r4'
 
